@@ -72,6 +72,9 @@
 #define SOC_ADC_RTC_MAX_BITWIDTH                (12)
 #define SOC_RTC_SLOW_CLOCK_SUPPORT_8MD256       (1)
 
+/*!< Calibration */
+#define SOC_ADC_CALIBRATION_V1_SUPPORTED        (1) /*!< support HW offset calibration version 1*/
+
 /*-------------------------- BROWNOUT CAPS -----------------------------------*/
 #define SOC_BROWNOUT_RESET_SUPPORTED 1
 
@@ -113,9 +116,6 @@
 
 // digital I/O pad powered by VDD3P3_CPU or VDD_SPI(GPIO_NUM_6~GPIO_NUM_20)
 #define SOC_GPIO_VALID_DIGITAL_IO_PAD_MASK 0x00000000001FFFC0ULL
-
-// Support to configure sleep status
-#define SOC_GPIO_SUPPORT_SLP_SWITCH  (1)
 
 /*-------------------------- Dedicated GPIO CAPS -----------------------------*/
 #define SOC_DEDIC_GPIO_OUT_CHANNELS_NUM (8) /*!< 8 outward channels on each CPU core */
@@ -227,6 +227,10 @@
 #define SOC_TIMER_GROUP_SUPPORT_XTAL      (1)
 #define SOC_TIMER_GROUP_SUPPORT_PLL_F40M  (1)
 #define SOC_TIMER_GROUP_TOTAL_TIMERS      (1U)
+
+/*-------------------------- eFuse CAPS----------------------------*/
+#define SOC_EFUSE_DIS_PAD_JTAG 1
+#define SOC_EFUSE_DIS_DIRECT_BOOT 1
 
 /*-------------------------- Secure Boot CAPS----------------------------*/
 #define SOC_SECURE_BOOT_V2_ECC              1

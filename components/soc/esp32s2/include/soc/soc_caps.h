@@ -151,9 +151,6 @@
 // digital I/O pad powered by VDD3P3_CPU or VDD_SPI(GPIO_NUM_26~GPIO_NUM_46)
 #define SOC_GPIO_VALID_DIGITAL_IO_PAD_MASK  0x00007FFFFC000000ULL
 
-// Support to configure slept status
-#define SOC_GPIO_SUPPORT_SLP_SWITCH  (1)
-
 /*-------------------------- Dedicated GPIO CAPS ---------------------------------------*/
 #define SOC_DEDIC_GPIO_OUT_CHANNELS_NUM (8) /*!< 8 outward channels on each CPU core */
 #define SOC_DEDIC_GPIO_IN_CHANNELS_NUM  (8) /*!< 8 inward channels on each CPU core */
@@ -358,6 +355,13 @@
 /*-------------------------- AES CAPS -----------------------------------------*/
 #define SOC_AES_SUPPORT_DMA     (1)
 #define SOC_AES_SUPPORT_GCM     (1)
+
+/*-------------------------- eFuse CAPS----------------------------*/
+#define SOC_EFUSE_DIS_DOWNLOAD_DCACHE 1
+#define SOC_EFUSE_HARD_DIS_JTAG 1
+#define SOC_EFUSE_SOFT_DIS_JTAG 1
+#define SOC_EFUSE_DIS_BOOT_REMAP 1
+#define SOC_EFUSE_DIS_LEGACY_SPI_BOOT 1
 
 /*-------------------------- Secure Boot CAPS----------------------------*/
 #define SOC_SECURE_BOOT_V2_RSA              1

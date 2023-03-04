@@ -311,10 +311,6 @@ config SOC_GPIO_VALID_DIGITAL_IO_PAD_MASK
     hex
     default 0x00000000003FFFC0
 
-config SOC_GPIO_SUPPORT_SLP_SWITCH
-    bool
-    default y
-
 config SOC_DEDIC_GPIO_OUT_CHANNELS_NUM
     int
     default 8
@@ -680,6 +676,22 @@ config SOC_TWAI_BRP_MAX
     default 16384
 
 config SOC_TWAI_SUPPORTS_RX_STATUS
+    bool
+    default y
+
+config SOC_EFUSE_DIS_PAD_JTAG
+    bool
+    default y
+
+config SOC_EFUSE_DIS_USB_JTAG
+    bool
+    default y
+
+config SOC_EFUSE_DIS_DIRECT_BOOT
+    bool
+    default y
+
+config SOC_EFUSE_SOFT_DIS_JTAG
     bool
     default y
 
